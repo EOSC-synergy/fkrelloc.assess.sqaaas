@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/stevenjgibbons/fkrelloc:
+      branch: main
+      repo: https://github.com/stevenjgibbons/fkrelloc
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/stevenjgibbons/fkrelloc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-chartreuse-orangutan.sh
+        container: qc.acc_ready-chestnut-salamander
+  QC.Doc:
+    repos:
+      github.com/stevenjgibbons/fkrelloc find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-eggplant-gharial.sh
+        container: qc.doc_wiggy-brown-eagle
+      github.com/stevenjgibbons/fkrelloc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-sepia-cougar.sh
+        container: qc.doc_droopy-russet-koala
+      github.com/stevenjgibbons/fkrelloc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-scarlet-fly.sh
+        container: qc.doc_snippy-brown-skunk
+  QC.Lic:
+    repos:
+      github.com/stevenjgibbons/fkrelloc licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-periwinkle-camel.sh
+        container: qc.lic_slaphappy-zucchini-cheetah
+  QC.Sec:
+    repos:
+      github.com/stevenjgibbons/fkrelloc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-thistle-chicken.sh
+        container: qc.sec_jumpy-cerise-mist
+  QC.Sty:
+    repos:
+      github.com/stevenjgibbons/fkrelloc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-lavender-fly.sh
+        container: qc.sty_grumpy-corn-frigatebird
+  QC.Uni:
+    repos:
+      github.com/stevenjgibbons/fkrelloc pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-orchid-earwig.sh
+        container: qc.uni_jumpy-puce-rat
+  QC.Ver:
+    repos:
+      github.com/stevenjgibbons/fkrelloc get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-salmon-lemming.sh
+        container: qc.ver_woozy-violet-lizard
+timeout: 5400
