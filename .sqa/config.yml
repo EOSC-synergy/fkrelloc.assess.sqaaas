@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/stevenjgibbons/fkrelloc git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-chartreuse-orangutan.sh
-        container: qc.acc_ready-chestnut-salamander
+        - /usr/bin/env sh .sqa/script.nippy-coral-ladybird.sh
+        container: qc.acc_scanty-cinnabar-woodpecker
   QC.Doc:
     repos:
       github.com/stevenjgibbons/fkrelloc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-eggplant-gharial.sh
-        container: qc.doc_wiggy-brown-eagle
+        - /usr/bin/env sh .sqa/script.droopy-eggplant-chimpanzee.sh
+        container: qc.doc_fuzzy-magenta-collie
       github.com/stevenjgibbons/fkrelloc git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-sepia-cougar.sh
-        container: qc.doc_droopy-russet-koala
+        - /usr/bin/env sh .sqa/script.scaly-orchid-burmese.sh
+        container: qc.doc_snappy-ruby-sheep
       github.com/stevenjgibbons/fkrelloc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-scarlet-fly.sh
-        container: qc.doc_snippy-brown-skunk
+        - /usr/bin/env sh .sqa/script.stealthy-olivine-bullfrog.sh
+        container: qc.doc_boozy-silver-tarantula
   QC.Lic:
     repos:
       github.com/stevenjgibbons/fkrelloc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-periwinkle-camel.sh
-        container: qc.lic_slaphappy-zucchini-cheetah
+        - /usr/bin/env sh .sqa/script.chummy-eggplant-ladybird.sh
+        container: qc.lic_gimpy-burgundy-booby
   QC.Sec:
     repos:
       github.com/stevenjgibbons/fkrelloc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-thistle-chicken.sh
-        container: qc.sec_jumpy-cerise-mist
+        - /usr/bin/env sh .sqa/script.baggy-buff-gharial.sh
+        container: qc.sec_skanky-xanthic-caracal
   QC.Sty:
     repos:
       github.com/stevenjgibbons/fkrelloc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-lavender-fly.sh
-        container: qc.sty_grumpy-corn-frigatebird
+        - /usr/bin/env sh .sqa/script.nerdy-platinum-alligator.sh
+        container: qc.sty_lousy-eggplant-fowl
   QC.Uni:
     repos:
       github.com/stevenjgibbons/fkrelloc pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-orchid-earwig.sh
-        container: qc.uni_jumpy-puce-rat
+        - /usr/bin/env sh .sqa/script.hazy-cornflower-whippet.sh
+        container: qc.uni_gamy-black-chinook
   QC.Ver:
     repos:
       github.com/stevenjgibbons/fkrelloc get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-salmon-lemming.sh
-        container: qc.ver_woozy-violet-lizard
+        - /usr/bin/env sh .sqa/script.squirrely-green-butterfly.sh
+        container: qc.ver_blurry-cream-shrew
 timeout: 5400
